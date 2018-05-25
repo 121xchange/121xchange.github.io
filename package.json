@@ -1,8 +1,8 @@
 {
-    "title": "Agency",
-    "name": "startbootstrap-agency",
+    "title": "121xchange",
+    "name": "121xchange",
     "version": "4.1.1",
-    "description": "Agency is a one page HTML theme for Bootstrap.",
+    "description": "121xchange",
     "keywords": [
         "css",
         "sass",
@@ -11,19 +11,19 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/template-overviews/agency",
+    "homepage": "https://121xchange.github.io",
     "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-agency/issues",
-        "email": "feedback@startbootstrap.com"
+        "url": "https://121xchange.github.io",
+        "email": "haris6summer@gmail.com"
     },
     "license": "MIT",
-    "author": "Start Bootstrap",
+    "author": "Summer Haris",
     "contributors": [
-        "David Miller (http://davidmiller.io/)"
+        "Serge Urakhchin (http://surakhchin.github.io/)"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-agency.git"
+        "url": "https://github.com/121xchange/121xchange.github.io"
     },
     "dependencies": {
         "bootstrap": "4.1.1",
