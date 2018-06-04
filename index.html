@@ -58,6 +58,83 @@
       </div>
     </nav>
 
+
+    <!--Video Header -->
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+/*body {*/
+    /*margin: 0;*/
+    /*font-family: Arial;*/
+    /*font-size: 17px;*/
+/*}*/
+
+#myVideo1234 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    /*z-index: -1;*/
+}
+
+/*.content1234 {*/
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*background: rgba(0, 0, 0, 0.5);*/
+    /*color: #f1f1f1;*/
+    /*width: 100%;*/
+    /*padding: 20px;*/
+/*}*/
+
+#myBtn1234 {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn1234:hover {
+    background: #ddd;
+    color: black;
+}
+</style>
+
+<video autoplay muted loop id="myVideo1234">
+  <source src="vid.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content1234">
+  <h1>Heading</h1>
+  <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
+  <button id="myBtn1234" onclick="myFunction1234()">Pause</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo1234");
+var btn = document.getElementById("myBtn1234");
+
+function myFunction1234() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+
+    <!--Video Header -->
+
+
     <!-- Header -->
     <header class="masthead">
       <div class="container">
