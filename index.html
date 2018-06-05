@@ -145,7 +145,7 @@ function myFunction1234() {
         <div class="intro-text">
           <div class="intro-heading">Welcome Audio Hive Minds</div>
           <div class="intro-lead-in ">121xChange: Where Art Meets News & Technology</div>
-          <a onclick="PlaySound('Intro1')" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" style="background-color: black">Play Me</a>
+          <a id="btn12" onclick="PlaySound('Intro1')" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" style="background-color: black">Play Me</a>
         </div>
       </div>
     </header>
@@ -282,28 +282,48 @@ function myFunction1234() {
       <!-------------------------sound click code-------------------------->
       <script>
     function PlaySound(melody) {
+
+        var btn12 = document.getElementById("btn12");
+
+
+
+
         // alert("On Press of "+melody);
         var path = "./img/about/"
         var snd = new Audio(path + melody + ".mp3");
+
+      //           if (snd.paused) {
+      //   snd.play();
+      //   btn12.innerHTML = "Pause";
+      // }else {
+      //   snd.pause();
+      //   btn12.innerHTML = "Play Me";
+      // }
+
         snd.play();
+
+
+
     }
 </script>
 
 
-      <script>
-var video = document.getElementById("myVideo1234");
-var btn = document.getElementById("myBtn1234");
+      <!--<script>-->
+        <!--var path = "./img/about/"-->
+        <!--var snd = new Audio(path + melody + ".mp3");-->
 
-function myFunction1234() {
-  if (snd.paused) {
-    snd.play();
-    btn.innerHTML = "Pause";
-  } else {
-    snd.pause();
-    btn.innerHTML = "Play";
-  }
-}
-</script>
+        <!--var btn12 = document.getElementById("btn12");-->
+
+        <!--function myFunction1234() {-->
+          <!--if (snd.paused) {-->
+            <!--snd.play();-->
+            <!--btn12.innerHTML = "Pause";-->
+          <!--} else {-->
+            <!--snd.pause();-->
+            <!--btn12.innerHTML = "Play";-->
+          <!--}-->
+        <!--}-->
+<!--</script>-->
       <!-------------------------sound click code-------------------------->
 
     </section>
