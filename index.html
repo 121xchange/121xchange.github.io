@@ -117,7 +117,7 @@
   <br>
   <!--<h1>Heading</h1>-->
   <!--<p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>-->
-  <button id="myBtn1234" onclick="myFunction1234()">Pause</button>
+  <button style="background-color: transparent" id="myBtn1234" onclick="myFunction1234()">Pause</button>
 </div>
 
 <script>
@@ -145,13 +145,56 @@ function myFunction1234() {
         <div class="intro-text">
           <div class="intro-heading">Welcome Audio Hive Minds</div>
           <div class="intro-lead-in ">121xChange: Where Art Meets News & Technology</div>
-          <a onclick="PlaySound('Intro1')" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger">Play Me</a>
+          <a onclick="PlaySound('Intro1')" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" style="background-color: black">Play Me</a>
         </div>
       </div>
     </header>
 
+
+    <!-- Services -->
+    <section style="color:white; background-color: black" id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Projects</h2>
+            <h3 class="section-subheading text-muted"> We bend genres, we tell stories.</h3>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa fa-headphones fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Public Radio Series</h4>
+            <p class="text-muted"> Travelling public radio series that puts a spotlight on the people who listen to public radio and the ones who are behind the mic.</p>
+            <p><a>link</a></p>
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Random Rooney Rants</h4>
+            <p class="text-muted"> Andy Rooney is no longer with us, but we all have a rooney in us.</p>
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa fa-car fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Wanna Ride?</h4>
+            <p class="text-muted"> Voices of the people.</p>
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Play Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
     <!-- About -->
-    <section style="background-color: grey" id="about">
+    <section style="color:white; background-color: black" id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -245,49 +288,27 @@ function myFunction1234() {
         snd.play();
     }
 </script>
+
+
+      <script>
+var video = document.getElementById("myVideo1234");
+var btn = document.getElementById("myBtn1234");
+
+function myFunction1234() {
+  if (snd.paused) {
+    snd.play();
+    btn.innerHTML = "Pause";
+  } else {
+    snd.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
       <!-------------------------sound click code-------------------------->
 
     </section>
 
-    <!-- Services -->
-    <section style="color:white; background-color: black" id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Projects</h2>
-            <h3 class="section-subheading text-muted"> We bend genres, we tell stories.</h3>
-          </div>
-        </div>
-        <div class="row text-center">
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-headphones fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Public Radio Series</h4>
-            <p class="text-muted"> Travelling public radio series that puts a spotlight on the people who listen to public radio and the ones who are behind the mic.</p>
-            <p><a>link</a></p>
-          </div>
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-user fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Random Rooney Rants</h4>
-            <p class="text-muted"> Andy Rooney is no longer with us, but we all have a rooney in us.</p>
-          </div>
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-car fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">Wanna Ride?</h4>
-            <p class="text-muted"> Voices of the people.</p>
-            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Play Me</a>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <!-- Portfolio Grid -->
     <!--<section style="background-color: grey" id="portfolio">-->
