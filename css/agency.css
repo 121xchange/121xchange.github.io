@@ -13,11 +13,11 @@ p {
 }
 
 a {
-  color: #fed136;
+  color: #4e6590 !important;
 }
 
 a:hover {
-  color: #fec503;
+  color: #4e6590 !important;
 }
 
 .text-primary {
@@ -70,27 +70,27 @@ section h3.section-subheading {
 }
 
 .btn-primary {
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #fec810 !important;
-  border-color: #fec810 !important;
+  background-color: white;
+  border-color: white;
   color: white;
 }
 
 .btn-primary:active, .btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem #4e6590 !important;
 }
 
 ::-moz-selection {
-  background: #fed136;
+  background: #4e6590 !important;
   text-shadow: none;
 }
 
 ::selection {
-  background: #fed136;
+  background: #4e6590 !important;
   text-shadow: none;
 }
 
@@ -113,17 +113,17 @@ img::-moz-selection {
   text-transform: uppercase;
   color: white;
   border: 0;
-  background-color: #fed136;
+  background-color: #4e6590 !important;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #mainNav .navbar-brand {
-  color: #fed136;
+  color: #4e6590 !important;
   font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #fec503;
+  color: #4e6590 !important;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -136,7 +136,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #fed136;
+  color: #4e6590 !important;
 }
 
 @media (min-width: 992px) {
@@ -452,9 +452,9 @@ header.masthead .intro-text .intro-heading {
   margin-left: 0;
   text-align: center;
   color: white;
-  border: 7px solid #e9ecef;
+  border: 7px solid #4e6590 !important;
   border-radius: 100%;
-  background-color: #fed136;
+  background-color: #4e6590 !important;
 }
 
 .timeline > li .timeline-image h4 {
@@ -688,12 +688,12 @@ ul.social-buttons li a {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
-  color: white;
+  color: #4e6590 !important;
   border-radius: 100%;
   outline: none;
   background-color: #212529;
 }
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-  background-color: #fed136;
+  background-color: #4e6590 !important;
 }
