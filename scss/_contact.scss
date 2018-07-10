@@ -19,6 +19,10 @@ section#contact {
     textarea.form-control {
       height: 248px;
     }
+    label {
+      color: $white;
+      font-size: 18px;
+    }
   }
   .form-control:focus {
     border-color: $primary;
