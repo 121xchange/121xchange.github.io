@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
-var rename = require("gulp-rename");
+var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 var browserSync = require('browser-sync').create();
@@ -25,7 +25,7 @@ gulp.task('vendor', function() {
       '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
       '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
     ])
-    .pipe(gulp.dest('./vendor/bootstrap'))
+    .pipe(gulp.dest('./vendor/bootstrap'));
 
   // Font Awesome
   gulp.src([
@@ -35,20 +35,20 @@ gulp.task('vendor', function() {
       '!./node_modules/font-awesome/.*',
       '!./node_modules/font-awesome/*.{txt,json,md}'
     ])
-    .pipe(gulp.dest('./vendor/font-awesome'))
+    .pipe(gulp.dest('./vendor/font-awesome'));
 
   // jQuery
   gulp.src([
       './node_modules/jquery/dist/*',
       '!./node_modules/jquery/dist/core.js'
     ])
-    .pipe(gulp.dest('./vendor/jquery'))
+    .pipe(gulp.dest('./vendor/jquery'));
 
   // jQuery Easing
   gulp.src([
       './node_modules/jquery.easing/*.js'
     ])
-    .pipe(gulp.dest('./vendor/jquery-easing'))
+    .pipe(gulp.dest('./vendor/jquery-easing'));
 
 });
 
@@ -61,7 +61,7 @@ gulp.task('css:compile', function() {
     .pipe(header(banner, {
       pkg: pkg
     }))
-    .pipe(gulp.dest('./css'))
+    .pipe(gulp.dest('./css'));
 });
 
 // Minify CSS
@@ -108,7 +108,7 @@ gulp.task('default', ['css', 'js', 'vendor']);
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
-      baseDir: "./"
+      baseDir: './'
     }
   });
 });

@@ -19,6 +19,10 @@ section#contact {
     textarea.form-control {
       height: 248px;
     }
+    label {
+      color: $white;
+      font-size: 18px;
+    }
   }
   .form-control:focus {
     border-color: $primary;
@@ -45,5 +49,18 @@ section#contact {
     font-weight: 700;
     color: $gray-400;
     @include heading-font;
+  }
+  #thumbsUp {
+    border: 1px solid white;
+    height: 50px;
+    color: white;
+    font-size: large;
+    width: fit-content;
+    min-width: 174px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  #thumbUpTracker {
+    margin-top: 8px;
   }
 }
