@@ -25,6 +25,10 @@
     <link href="css/agency.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
 
+    <!--jQUERY CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+
+
   </head>
 
   <body id="page-top" class="bg-light">
@@ -287,7 +291,7 @@ function myFunction1234() {
     </section>
 
 
-    <!-- Services -->
+    <!-- PROJECTS  -->
     <section style="color:white; background-color: black" id="services">
       <div class="container">
         <div class="row">
@@ -297,7 +301,7 @@ function myFunction1234() {
           </div>
         </div>
         <div class="row text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-toggle="modal" data-target="#PRSModal">
             <!--<div class="team-member">-->
             <span class="fa-stack fa-4x">
               <!--<img class="mx-auto rounded-circle" src="img/summer3.png" alt="">-->
@@ -309,7 +313,7 @@ function myFunction1234() {
             <p><a>link</a></p>
               <!--</div>-->
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-toggle="modal" data-target="#RRRModal">
             <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa fa-user fa-stack-1x fa-inverse"></i>
@@ -317,7 +321,7 @@ function myFunction1234() {
             <h4 class="service-heading text-primary">Random Rooney Rants</h4>
             <p class="text-muted"> Andy Rooney is no longer with us, but we all have a rooney in us.</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-toggle="modal" data-target="#RideModal">
             <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa fa-car fa-stack-1x fa-inverse"></i>
@@ -623,8 +627,8 @@ function myFunction1234() {
           <div class="col-sm-4">
             <div class="team-member">
               <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-              <h4 style="color: #4e6590 !important">Diana Pertersen</h4>
-              <p class="text-muted"> siri-please ask how can I help you.</p>
+              <h4 style="color: #4e6590 !important">Siri</h4>
+              <p class="text-muted"> how can I help you?</p>
               <ul class="list-inline social-buttons">
                 <!--<li class="list-inline-item">-->
                   <!--<a href="#">-->
@@ -709,6 +713,10 @@ function myFunction1234() {
                     <button name="submit" type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </form>
+                <div class="text-center">
+                  <div id="thumbsUp"></div>
+                  <button id="thumbUpTracker" class="btn btn"></button>
+              </div>
               </div>
     
           </div>
@@ -748,6 +756,25 @@ function myFunction1234() {
         <!--</div>-->
       </div>
     </section>
+
+  <!-- Script for Contact Form. Counter tracking submits -->
+    <script>
+      var thumbsUpTracker = 0;
+
+      $("#thumbUpTracker").on("click", function() {
+
+          thumbsUpTracker++;
+          console.log(thumbsUpTracker);
+          // $("#thumbsUp").innerHTML("Thumbs: ");
+            document.getElementById("thumbsUp").innerHTML = "Thumbs Up: " + thumbsUpTracker;
+        });
+
+//test
+
+    </script>
+
+
+
 
     <!-- Footer -->
     <footer style="background-color: grey">
@@ -792,7 +819,7 @@ function myFunction1234() {
     <!-- Portfolio Modals -->
 
     <!-- Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="PRSModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -826,7 +853,7 @@ function myFunction1234() {
     </div>
 
     <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="RRRModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -860,7 +887,7 @@ function myFunction1234() {
     </div>
 
     <!-- Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="RideModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -996,6 +1023,7 @@ function myFunction1234() {
     </div>
 
     <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

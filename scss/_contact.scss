@@ -50,4 +50,10 @@ section#contact {
     color: $gray-400;
     @include heading-font;
   }
+  #thumbsUp {
+    border: 1px solid white;
+    height: 50px;
+    color: white;
+    font-size: large;
+  }
 }
