@@ -75,7 +75,9 @@ section h3.section-subheading {
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+  background-color: transparent !important;
   border-color: white !important;
+  color: white;
 }
 
 .btn-primary:active, .btn-primary:focus {
