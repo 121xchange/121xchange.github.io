@@ -55,5 +55,12 @@ section#contact {
     height: 50px;
     color: white;
     font-size: large;
+    width: fit-content;
+    min-width: 174px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  #thumbUpTracker {
+    margin-top: 8px;
   }
 }
