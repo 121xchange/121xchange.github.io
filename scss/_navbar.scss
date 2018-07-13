@@ -6,7 +6,7 @@
     right: 0;
     padding: 13px;
     text-transform: uppercase;
-    color: white;
+    color: lighten( $primary, 20% );
     border: 0;
     background-color: $primary;
     @include heading-font;
@@ -18,7 +18,7 @@
     &:active,
     &:focus,
     &:hover {
-      color: darken($primary, 10%);
+      color: darken($primary, 20%);
     }
   }
   .navbar-nav {
@@ -28,7 +28,7 @@
         font-weight: 400;
         padding: 0.75em 0;
         letter-spacing: 1px;
-        color: white;
+        color: lighten( $primary, 20% );
         @include heading-font;
         &.active,
         &:hover {
