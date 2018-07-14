@@ -720,7 +720,7 @@ function myFunction1234() {
                   </button>
               </div>
               </div>
-    
+
           </div>
         </div>
         <!--<div class="row">-->
@@ -761,17 +761,92 @@ function myFunction1234() {
 
   <!-- Script for Contact Form. Counter tracking submits -->
     <script>
-      var thumbsUpTracker = 0;
+      $.ajax({
+
+        url : 'http://35.167.142.181:3001/count/all',
+        method: 'POST',
+        data: null,
+        processData: false,
+        contentType: 'application/json',
+        dataType:'json',
+        error: function(xhr, status, error)
+        {
+            alert(xhr.responseText);
+        },
+        success: function(response)
+        {
+            if(response.status = "success")
+            {
+                console.log('counter updated successfully');
+            }
+            console.log(response)
+            document.getElementById("thumbsUp").innerHTML = "Thumbs Up: " + response[0].count;
+        }
+    });
 
       $("#thumbUpTracker").on("click", function() {
 
-          thumbsUpTracker++;
-          console.log(thumbsUpTracker);
-          // $("#thumbsUp").innerHTML("Thumbs: ");
-            document.getElementById("thumbsUp").innerHTML = "Thumbs Up: " + thumbsUpTracker;
+          // thumbsUpTracker++;
+          // // console.log(thumbsUpTracker);
+          // // $("#thumbsUp").innerHTML("Thumbs: ");
+          //   document.getElementById("thumbsUp").innerHTML = "Thumbs Up: " + thumbsUpTracker;
+
+                $.ajax({
+
+        url : 'http://35.167.142.181:3001/count/update',
+        method: 'POST',
+        data: null,
+        processData: false,
+        contentType: 'application/json',
+        dataType:'json',
+        error: function(xhr, status, error)
+        {
+            alert(xhr.responseText);
+        },
+        success: function(response)
+        {
+            if(response.status = "success")
+            {
+                console.log('counter updated successfully');
+            }
+            console.log(response)
+            document.getElementById("thumbsUp").innerHTML = "Thumbs Up: " + response;
+        }
+    });
         });
 
-//test
+    // var dataObject = {username: username,
+    //     workorderid: workorderid};
+    // var dataString = JSON.stringify(dataObject);
+    // console.log(dataObject);
+    // console.log('this is dataString: '+ dataString);
+    // $.ajax({
+    //
+    //     url : 'http://34.230.24.225:3026/workorder/changeuser',
+    //     method: 'POST',
+    //     data: null,
+    //     processData: false,
+    //     contentType: 'application/json',
+    //     dataType:'json',
+    //     error: function(xhr, status, error)
+    //     {
+    //         alert(xhr.responseText);
+    //     },
+    //     success: function(response)
+    //     {
+    //         if(response.status = "success")
+    //         {
+    //             alert('Workorder reassigned successfully');
+    //         }
+    //         console.log(response.json())
+    //         // alert('Workorder reassigned successfully');
+    //     }
+    // });
+
+
+
+
+
 
     </script>
 
