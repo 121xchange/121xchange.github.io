@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+    </head>
+    <body>
+        <div id="image-block">
+            <div id="hero">
+            </div>
+            <img id="background" src="/img/bg.jpg" />
+        </div>
+        <div class="section">
+            Mission.
+
+            TODAY IS YOUR OPPORTUNITY TO BE KIND. 
+
+
+
+            WE ARE: 
+
+            AMBITIOUS.
+
+            CREATIVE REBELS. 
+
+            TRAVELERS. 
+
+            DREAMERS. 
+
+            MEMBERSHIP RULES:
+
+
+            OUR RULES: 
+
+
+            IF YOU YEARN FOR IT, CREATE IT. 
+
+            OWNERSHIP IS FREEDOM. 
+
+
+            UPCOMING: 
+
+
+
+
+            ACOUSTIC LISTENING SESSIONS 
+
+            ZINES
+        </div>
+        <script type="text/javascript">
+            var hero = document.getElementById("hero")
+            ,   names = [
+                {
+                    name: "Will Brickner",
+                    aboutMeHTML: "Hello there"
+                },
+                {
+                    name: "Summer Haris",
+                    aboutMeHTML: "Hello there"
+                },
+                {
+                    name: "Nicholas Napier",
+                    aboutMeHTML: "Hello there"
+                },
+                {
+                    name: "David Girjis",
+                    aboutMeHTML: "Hello there"
+                },
+                {
+                    name: "Fiona Kalensky",
+                    aboutMeHTML: "Hello there"
+                },
+                {
+                    name: "Lauren Solberg",
+                    aboutMeHTML: "Hello there"
+                },
+                {
+                    name: "Leon Ramsey Jr",
+                    aboutMeHTML: "Hello there"
+                },
+                {
+                    name: "Narineh Saferian",
+                    aboutMeHTML: "Hello there"
+                },
+                {
+                    name: "Ramiro Huizar",
+                    aboutMeHTML: "Hello there"
+                },
+                {
+                    name: "Tamika Tyan",
+                    aboutMeHTML: "Hello there"
+                }
+            ]
+            ,   shuffledNames = new Array(names.length);
+
+            // shuffle the names
+            function generateNewIndex() {
+                var idx = Math.floor(names.length * Math.random())
+                while (shuffledNames[idx]) {
+                    idx = Math.floor(names.length * Math.random())
+                }
+                return idx
+            }
+            for (var j = 0, jlen = names.length; j < jlen; ++j) {
+                shuffledNames[generateNewIndex()] = names[j]
+            }
+
+            // remove visible class, mark as contracted
+            function fold(el) {
+                if (!el) { return }
+                el.className = "unfoldable"
+                el.setAttribute("data-unfold-status", "contracted")
+            }
+            // add visible class, mark as expanded
+            function unfold(el) {
+                if (!el) { return }
+                el.className = "unfoldable visible"
+                el.setAttribute("data-unfold-status", "expanded")
+            }
+
+            function unfoldTriggerClicked() {
+                var target = this.getAttribute("data-target")
+                if (!target) { return }
+                if (this.getAttribute("data-unfold-status") === "expanded") {
+                    // expanded
+                    fold(document.getElementById(target))
+                } else {
+                    // contracted
+                    unfold(document.getElementById(target), "visible")
+                }
+            }
+            // build the DOM
+            for (var j = 0; j < jlen; ++j) {
+                var element = document.createElement("h2")
+                ,   about = document.createElement("div")
+                ,   cleanedId = Math.random().toString(36)
+
+                element.appendChild(
+                    document.createTextNode(shuffledNames[j].name)
+                )
+                
+                element.className = "list-item"
+                element.setAttribute("data-target", cleanedId)
+                element.setAttribute("data-unfold-status", "contracted")
+                element.addEventListener("click", unfoldTriggerClicked, false)
+
+                about.className = "unfoldable"
+                about.id = cleanedId
+                about.innerHTML = shuffledNames[j].aboutMeHTML
+
+                hero.appendChild(element)
+                hero.appendChild(about)
+            }
+        </script>
+    </body>
+</html>
